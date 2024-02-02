@@ -22,21 +22,21 @@ def get_server_status():
 # All GET Requests
 
 @app.route('/overlay/all', methods=['GET'])
-def get():
+def get_overlay_all():
     collection = mongo.db.overlays
     data = list(collection.find())
     data = json_util.dumps(data)
     return data, 200
 
 @app.route('/overlay/txt', methods=['GET'])
-def text():
+def get_overlay_txt():
     collection = mongo.db.overlays
     data = list(collection.find({'type': 'text'}))
     data = json_util.dumps(data)
     return data, 200
 
 @app.route('/overlay/img', methods=['GET'])
-def image():
+def get_overlay_img():
     collection = mongo.db.overlays
     data = list(collection.find({'type': 'image'}))
     data = json_util.dumps(data)
@@ -45,7 +45,7 @@ def image():
 # All Post Requests
 
 @app.route('/overlay/post', methods=['POST'])
-def post():
+def post_overlay():
     collection = mongo.db.overlays
     overlay = request.json
     data = collection.insert_one(overlay)
@@ -54,7 +54,7 @@ def post():
 
 # All Update Requests
 @app.route('/overlay/update/<id>', methods=['PUT'])
-def update(id):
+def update_overlay(id):
     collection = mongo.db.overlays
     updated_record = request.json
     result = collection.update_one({'_id': ObjectId(id)}, {'$set': updated_record})
@@ -63,7 +63,7 @@ def update(id):
 
 # All Delete Requests
 @app.route('/overlay/delete/<id>', methods=['DELETE'])
-def delete(id):
+def delete_overlay(id):
     collection = mongo.db.overlays
     result = collection.delete_one({'_id': ObjectId(id)})
     return jsonify({"message": "Overlay Deleted", "deleted_count": result.deleted_count}), 200

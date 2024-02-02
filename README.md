@@ -18,31 +18,31 @@ This documentation provides a detailed overview of the different API endpoints (
 
  **URL:** `/overlay/all`
 * **Method:** GET
-* **Request:** None
 * **Response:**
     * Status: 200 OK
     * Content: JSON array of all overlays
+ ![Screenshot 2024-02-02 174623](https://github.com/shivansh-soni07/Video-Streaming-RTSP-using-React-Python-Flask-MongoDB/assets/72219885/5b7d3831-e689-4c13-aa4f-37d69074d344)
 
 
 ##### Retrieve text overlays:
 
  **URL:** `/overlay/txt`
 * **Method:** GET
-* **Request:** None
 * **Response:**
     * Status: 200 OK
     * Content: JSON array of overlays with type "text"
  
+![Screenshot 2024-02-02 174638](https://github.com/shivansh-soni07/Video-Streaming-RTSP-using-React-Python-Flask-MongoDB/assets/72219885/0e6c9b65-5f24-4d85-aa15-6f490c3a6ca4)
 
 ##### Retrieve image overlays:
 
  **URL:** `/overlay/img`
 * **Method:** GET
-* **Request:** None
 * **Response:**
     * Status: 200 OK
     * Content: JSON array of overlays with type "image"
  
+![Screenshot 2024-02-02 174651](https://github.com/shivansh-soni07/Video-Streaming-RTSP-using-React-Python-Flask-MongoDB/assets/72219885/5ff16a3a-01e2-470d-877f-e22320db6acf)
 
 ### POST Endpoint
 

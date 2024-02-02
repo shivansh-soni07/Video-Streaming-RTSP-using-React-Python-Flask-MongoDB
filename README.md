@@ -10,9 +10,9 @@ This documentation provides a detailed overview of the different API endpoints (
 **Replace `<id>` in URL with unique id of overlay**
  ## Endpoints 
 
- ### CRUD Operations 
+ ## CRUD Operations 
 
- #### GET Endpoints 
+ ### GET Endpoints 
 
  ##### Retrieve all overlays: 
 
@@ -44,7 +44,7 @@ This documentation provides a detailed overview of the different API endpoints (
     * Content: JSON array of overlays with type "image"
  
 
-#### POST Endpoint
+### POST Endpoint
 
 ##### Create a new overlay:
 
@@ -58,7 +58,7 @@ This documentation provides a detailed overview of the different API endpoints (
     * Status: 201 Created
     * Content: `{"message": "Overlay Created", "id": "625f5f54a954a3XXXXXXX"}`
 
-#### PUT Endpoint
+### PUT Endpoint
 
 ##### Update an existing overlay:
 
@@ -72,7 +72,7 @@ This documentation provides a detailed overview of the different API endpoints (
     * Status: 200 OK
     * Content: `{"message": "Overlay Updated", "modified_count": <mod_count>}`
 
-#### DELETE Endpoint
+### DELETE Endpoint
 
 ##### Delete an overlay:
 
